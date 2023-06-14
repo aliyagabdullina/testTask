@@ -42,7 +42,7 @@ def copy_files_with_english_chars(files, target_directory):
 
 if __name__ == '__main__':
     # Получение параметров напрямую из кода Python
-    copy_files_with_english_chars(file="/Users/aliya/PycharmProjects/pythonProject/myDir.txt", target_directory=
+    copy_files_with_english_chars(files=["/Users/aliya/PycharmProjects/pythonProject/myDir.txt"], target_directory=
     None)
 
     # Получение параметров из командной строки
@@ -52,9 +52,9 @@ if __name__ == '__main__':
             if arg.startswith("file="):
                 file_arg = arg.split("=")[1]
         if file_arg is not None:
-            copy_files_with_english_chars(file=file_arg, target_directory=None)
+            copy_files_with_english_chars(files=[file_arg], target_directory=None)
 
     # Получение параметров из переменного окружения
     file_env = os.getenv('FILE', None)
     if file_env is not None:
-        copy_files_with_english_chars(file=file_env, target_directory=None)
+        copy_files_with_english_chars(files=[file_env], target_directory=None)
