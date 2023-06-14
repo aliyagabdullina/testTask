@@ -12,8 +12,6 @@ def setup_target_directory():
     return target_directory
 
 
-# Тесты для ввода данных напрямую
-
 def test_non_english_chars_direct(setup_target_directory, capsys):
     target_directory = setup_target_directory
 
